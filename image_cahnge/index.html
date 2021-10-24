@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       <div class="flexcontainer">
+           <h1>Can you turn on the light bulb?</h1>
+           <br>
+           <img src="img/ofbulb.png " id="image">
+           <br>
+           <div class="cnt">
+               <!-- this is the inline technique to change the image -->
+               
+           <!-- <button id="On" onclick="document.getElementById('image').src='img/onbulb.png'">Turn on the light</button>
+           <button id="Of" onclick="document.getElementById('image').src='img/ofbulb.png'">Turn off the light</button>-->
+          <button id="On" onclick="onLight()">Turn on the light</button>
+          <button id="Of" onclick="ofLight()">Turn off the light</button>
+           </div>
+
+       </div>
+    </div>
+    
+    <script>
+    
+                  function onLight(){
+    var lightOn=document.getElementById("image");
+     lightOn.src="img/onbulb.png";
+ }
+
+ function ofLight(){
+var lightOf=document.getElementById("image");
+ lightOf.src="img/ofbulb.png";
+ }
+
+    </script>
+</body>
+</html>

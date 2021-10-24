@@ -1,0 +1,65 @@
+/* how to make a box using flex with ohter items inside it
+because it automatically places the items inside it in the center and is responsive
+
+declare a normal  non -flex box/container or flex container
+then inside the box declare a flex container with display direction  coulumn;
+then inside this flex container declare differnt containrers using flex:1 
+ 
+this will do the work
+*/
+
+*{
+    margin:0px;
+    padding:0px;
+}
+body,html{
+    overflow-x:hidden;
+    background-color:blueviolet;
+}
+
+/* the outer container is displayed as it is */
+.container{
+    display:block;
+    width:20rem;
+    padding:1rem;
+    margin:auto;
+    margin-top:15%; 
+    transform: translate(0, -15%) ; 
+    background-color:white;
+    align-items:center;
+}
+@media only screen and (max-width:320px){
+    .container{
+    width:15rem;
+}
+}
+.container .flexcontainer{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.flexcontainer .box{
+    flex:1;
+    display:block;
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+.flexcontainer #box1{
+    flex:1;
+    display:block;
+    text-align:center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.flexcontainer  #btn{
+     flex: 1; 
+    display:block;
+    padding:1rem; 
+    background-color:rgb(233, 132, 17);
+    border:none;
+    border-radius:10px;
+    text-align:center;
+}
+#btn:hover{
+    background-color:aliceblue;
+}
